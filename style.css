@@ -2,6 +2,13 @@
  @import url('https://fonts.googleapis.com/css?family=Muli:700&display=swap');
 
 
+ body {
+    margin: 0;
+    }
+    
+    *, *:before, *:after {
+      box-sizing: border-box;
+    }
  
 .container-fluid  {
     margin:0;
@@ -210,3 +217,19 @@
     margin: auto;
     text-align: justify;
 }
+
+.arrow {
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    border: 1px solid #e0dcdc;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    z-index: 9999;
+    background-color: #e0dcdc;
+    display: none;
+}
+.fa-arrow-up {
+    font-size: 2.5em;
+}
+
