@@ -91,3 +91,7 @@ function fadeOut(el){
 
   close.addEventListener('click', closePopup);
   btn.addEventListener('click', openPopup);
+
+
+
+  

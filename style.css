@@ -234,7 +234,7 @@
 }
 
 .popup-newsletter {
-    display: block;
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
@@ -265,3 +265,52 @@
     z-index: 2;
 }
 
+/* ---------------------------------------------------- */
+/* walidacja formularza JS */
+/* ---------------------------------------------------- */
+.form input.field-error,
+.form textarea.field-error {
+    border-color: tomato;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(255,99,71, 0.3);
+}
+.form-error-text {
+    color: tomato;
+    font-size: 0.8rem;
+}
+.form-error-inline .form-error-text {
+    display: none;
+}
+
+/* ---------------------------------------------------- */
+/* loading */
+/* ---------------------------------------------------- */
+.elem-is-busy {
+    position: relative;
+    pointer-events: none;
+    opacity:0.5;
+}
+
+.elem-is-busy::after {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    border-right-color: rgba(0,0,0,0.7);
+    transform: translate(-50%, -50%) rotate(0deg);
+    content:"";
+    animation: rotateSingleLoading 0.3s infinite linear;
+    z-index: 10;
+}
+
+@keyframes rotateSingleLoading {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}

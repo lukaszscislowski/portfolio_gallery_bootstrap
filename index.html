@@ -138,14 +138,16 @@
           </div>
 
           <div class="container container-form--contact">
-            <form>
+            <form class="form" id="contactForm" method="post" action="./send-script.php">
               <div class="form-group row">
                 <div class="col-md-6">
-                  <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+                  <label for="email">E-mail</label>
+                  <input type="email" name="email" class="form-control" id="email"  required  placeholder="Email" data-error-text="Wpisz poprawny email">
                 </div>
                 <div class=" col-md-6">
+                  <label for="exampleFormControlSelect3">Wybierz temat:</label>
                   <select class="form-control" id="exampleFormControlSelect3">
-                    <option selected>Wyberz temat</option>
+                    <option selected>Wybierz temat</option>
                     <option>1</option>
                     <option>2</option>
                     <option>3</option>
@@ -153,14 +155,15 @@
                     <option>5</option>
                   </select>
                 </div>
-
               </div>
               <div class="form-group row">
                 <div class="col-md-6">
-                  <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
-                </div>
+                      <label for="name">Imię</label>
+                      <input type="text" name="name" class="form-control" id="name" required pattern=.{3,} placeholder="Imię" data-error-text="Wypełnij to pole">
+                  </div>
                   <div class="col-md-6">
-                  <textarea class="form-control" id="exampleFormControlTextarea1 " rows="8" placeholder="Treść wiadomości"></textarea>
+                    <label for="message" >Wiadomość</label>
+                    <textarea class="form-control" name="message" id="message" rows="8" placeholder="Treść wiadomości" required data-error-text="Musisz wypełnić pole"></textarea>
                   </div>
               </div>
               <fieldset class="form-group row row-fieldset">
@@ -183,28 +186,26 @@
                     </div>
                   </div>
                 </div>
-              </fieldset>
-              
-            </form>
-
-            <div class="row justify-content-center">
-              <div class="col-8">
-                <div class="form-group">
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="gridCheck">
-                    <label class="form-check-label" for="gridCheck">
-                      Wyrażam zgodę na przetwarzanie moich danych osobowych
-                    </label>
+              </fieldset> 
+              <div class="row justify-content-center">
+                <div class="col-8">
+                  <div class="form-group">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" id="gridCheck">
+                      <label class="form-check-label" for="gridCheck">
+                        Wyrażam zgodę na przetwarzanie moich danych osobowych
+                      </label>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="row justify-content-center">
-              <div class="col-lg-2">
-              <button type="submit" class="btn btn-sm btn-primary btn-block btn-message">Wyślij wiadomość</button>
+              <div class="row justify-content-center">
+                <div class="col-lg-2">
+                  <button type="submit" id="loadingTest" class="btn btn-sm btn-primary btn-block btn-message">Wyślij wiadomość</button>
+                </div>
               </div>
+            </form>
           </div>
-        </div>
       </div>
 
       <div class="container-fluid container-break">
@@ -235,36 +236,37 @@
               <span aria-hidden="true">&times;</span>
             </button>
             <article>
-              <p class="h2">h2. Bootstrap heading</p>
-            <p><strong>This line rendered as bold text.</strong></p>
+              <p class="h2 text-center">Zapisz się do newslettera</p>
+            <p class="popup-desc  text-center" ><strong>Jeśli chcesz otrzymywać najswieższe informacje ze świata fotografii, dołącz do naszej społeczności.</strong></p>
             </article>
             <div class="form-row d-flex justify-content-center">
               <div class="form-group col-md-8">
                 <label for="inputEmail4">Email</label>
-                <input type="email" class="form-control" id="inputEmail4" placeholder="e-mail adress">
+                <input type="email" class="form-control" id="inputEmail4" placeholder="e-mail adres">
               </div>
             </div>
             <div class="form-row d-flex justify-content-center">
               <div class="form-group col-md-8">
-                <label for="first name">First name</label>
-                <input type="text" class="form-control" id="first name" placeholder="First name">
+                <label for="first name">Imię</label>
+                <input type="text" class="form-control" id="first name" placeholder="Imie">
               </div>
             </div>
             <div class="form-row d-flex justify-content-center">
               <div class="form-group col-md-8">
-                <label for="last name">Last name</label>
-                <input type="text" class="form-control" id="last name" placeholder="Last name">
+                <label for="last name">Nazwisko</label>
+                <input type="text" class="form-control" id="last name" placeholder="Nazwisko">
               </div>
             </div>
-            <div class="form-row d-flex justify-content-center">
+            <div class="form-row d-flex justify-content-center mb-3 mt-3">
               <div class="col-sm-8">
-                <button type="submit" class="btn btn-primary">Sign in</button>
+                <button type="submit" class="btn btn-block btn-primary ">Wyślij</button>
               </div>
           </form>
         </div>
       </section>
     <!-- Optional JavaScript -->
     <script src="js/script.js"></script>
+    <script src="js/form.js" ></script>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
