@@ -23,10 +23,10 @@ arrow.addEventListener('click', scrollTop);
 // fade out
 
 function fadeOut(el){
-    el.style.opacity = 1;
+    el.style.opacity = 0;
   
     (function fade() {
-      if ((el.style.opacity -= .1) < 0) {
+      if ((el.style.opacity -= .1) < 1) {
         el.style.display = "none";
       } else {
         requestAnimationFrame(fade);
@@ -37,7 +37,7 @@ function fadeOut(el){
   // fade in
   
   function fadeIn(el, display){
-    el.style.opacity = 0;
+    el.style.opacity = 1;
     el.style.display = display || "block";
   
     (function fade() {
@@ -51,8 +51,8 @@ function fadeOut(el){
   }
   
  function arrowSlide(){
-    const siteTop = document.body.scrollTop;
-    const pageHeight = document.body.scrollY / 2;
+    let pageHeight = $(window).height() / 2 ;
+    console.log(pageHeight);
     if (window.pageYOffset < pageHeight ){
       fadeOut(arrow);
     }else {

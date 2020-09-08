@@ -44,8 +44,7 @@
 
     const form = document.querySelector("#contactForm");
     const inputs = form.querySelectorAll("[required]");
-    console.log(form);
-    console.log(inputs);
+    
 
     //wyłączamy domyślną walidację
     form.setAttribute("novalidate", true);
