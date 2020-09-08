@@ -44,6 +44,8 @@
 
     const form = document.querySelector("#contactForm");
     const inputs = form.querySelectorAll("[required]");
+    console.log(form);
+    console.log(inputs);
 
     //wyłączamy domyślną walidację
     form.setAttribute("novalidate", true);
@@ -128,4 +130,19 @@
                 submit.classList.remove("element-is-busy");
             });
         }
+
+
+        // testInput(input) {
+        //     const valid = input.checkValidity();
+        //     this.markFieldAsError(input, !valid);
+        //     return valid;
+        // }
+
+
     });
+
+//     const loadingTest = document.querySelector("#loadingTest")
+//     loadingTest.addEventListener("click", e => {
+//     loadingTest.classList.add("loading");
+//     loadingTest.disabled = true;
+// });

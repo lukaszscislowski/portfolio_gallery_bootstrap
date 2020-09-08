@@ -27,19 +27,27 @@
     }
 
     
-    .row{
-        display: flex;
+    .row {
+        display: grid;
         flex-direction: column;
     }
     .row-thumb {
-       display: none;
+       display: grid !important;
+       align-content: center;
     
     }
     .col-thumb {
+        display: grid;
         width: 100% !important;
         margin-left: 0;
+        align-items: center;
+        justify-content: center;
 
     }
+    .col-thumb img {
+        padding-left: 0 !important;
+    }
+    
 
     .container-fluid  {
         margin:0;
@@ -63,6 +71,9 @@
     .col-footer {
         display: flex;
         margin-top: 1.5rem;
+    }
+    .footer-title {
+        padding: 4%;
     }
 }
 
@@ -200,7 +211,7 @@
 
 .footer {
     background-color: #f0f0f0;
-    height: 20rem;
+    min-height: 20rem;
 }
 
 .row-footer {
@@ -276,6 +287,8 @@
 /* ---------------------------------------------------- */
 /* walidacja formularza JS */
 /* ---------------------------------------------------- */
+
+.form .form-error select,
 .form input.field-error,
 .form textarea.field-error {
     border-color: tomato;
@@ -288,6 +301,12 @@
 }
 .form-error-inline .form-error-text {
     display: none;
+}
+.form .form-error select:focus,
+
+.form .form-error textarea:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(255, 99, 71, 0.3);
 }
 
 /* ---------------------------------------------------- */

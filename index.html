@@ -146,13 +146,13 @@
                 </div>
                 <div class=" col-md-6">
                   <label for="exampleFormControlSelect3">Wybierz temat:</label>
-                  <select class="form-control" id="exampleFormControlSelect3">
+                  <select class="form-control" id="exampleFormControlSelect3" required>
                     <option selected>Wybierz temat</option>
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
                   </select>
                 </div>
               </div>
@@ -179,7 +179,7 @@
                       </label>
                     </div>
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+                      <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2" checked required>
                       <label class="form-check-label" for="gridRadios2">
                         Modelką
                       </label>
@@ -191,7 +191,7 @@
                 <div class="col-8">
                   <div class="form-group">
                     <div class="form-check">
-                      <input class="form-check-input" type="checkbox" id="gridCheck">
+                      <input class="form-check-input" type="checkbox" id="gridCheck" required name="spamLike" data-error-text="Zaznacz to pole">
                       <label class="form-check-label" for="gridCheck">
                         Wyrażam zgodę na przetwarzanie moich danych osobowych
                       </label>
